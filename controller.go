@@ -29,7 +29,7 @@ func apiStatus(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Panic(err)
 	} else {
-		fmt.Fprint(w, "Connected to MongoDB!")
+		fmt.Fprint(w, os.Getenv("FLAG"))
 	}
 }
 func getHash(pwd []byte) string {
@@ -214,4 +214,3 @@ func updateNamebyID(w http.ResponseWriter, r *http.Request) {
 	updateResult.Decode(&result)
 	json.NewEncoder(w).Encode(result)
 }
-
