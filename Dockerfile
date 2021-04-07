@@ -7,7 +7,7 @@ LABEL maintainer="Sanhernandezmon <sanhernandezmon@unal.edu.co>"
 
 RUN apt-get update
 RUN apt-get install -y git
-RUN git clone git@bitbucket.org:User/repo.git
+RUN git clone https://github.com/santihernandezS4N/Unidad0.git
 
 WORKDIR /Unidad0
 
